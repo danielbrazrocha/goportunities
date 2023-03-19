@@ -6,6 +6,5 @@ var (
 	db *gorm.DB
 )
 
-func Init() error {
-	
+func Init() error {	
 }
