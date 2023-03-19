@@ -4,19 +4,33 @@ import "github.com/gin-gonic/gin"
 import "net/http"
 
 func initializeRoutes(router *gin.Engine) {
-	// definindo rota OLD style
-	router.GET("/ping", func(c *gin.Context) {
-		c.JSON(200, gin.H{
-			"message": "pong",
-		})
-	})
 
-	// definindo rota NEW style
 	v1 := router.Group("/api/v1"); {
 		v1.GET("/opening", func(ctx *gin.Context) {
 			ctx.JSON(http.StatusOK, gin.H{
 				"msg": "GET Opening",
 			})
 		})
+		v1.POST("/opening", func(ctx *gin.Context) {
+			ctx.JSON(http.StatusOK, gin.H{
+				"msg": "POST Opening",
+			})
+		})
+		v1.DELETE("/opening", func(ctx *gin.Context) {
+			ctx.JSON(http.StatusOK, gin.H{
+				"msg": "DELETE Opening",
+			})
+		})
+		v1.PUT("/opening", func(ctx *gin.Context) {
+			ctx.JSON(http.StatusOK, gin.H{
+				"msg": "PUT Opening",
+			})
+		})
+		v1.GET("/openings", func(ctx *gin.Context) {
+			ctx.JSON(http.StatusOK, gin.H{
+				"msg": "GET ALL Openings",
+			})
+		})
 	}
+	
 }
