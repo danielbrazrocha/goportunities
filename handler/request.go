@@ -42,7 +42,7 @@ func (r *CreateOpeningRequest) Validate() error {
 	return nil
 }
 
-// UpdateOpening
+// ADD UpdateOpening
 
 type UpdateOpeningRequest struct {
 	Role     string `json:"role"`
