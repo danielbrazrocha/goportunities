@@ -2,7 +2,7 @@ package handler
 
 import (
 	"net/http"
-	"github.com/danielbrazrocha/goportunities/schemas"
+	"github.com/danielbrazrocha/gopportunities/schemas"
 	"github.com/gin-gonic/gin"
 )
 
@@ -55,7 +55,7 @@ func UpdateOpeningHandler(ctx *gin.Context) {
 	if request.Salary > 0 {
 		opening.Salary = request.Salary
 	}
-	
+
 	// Save opening
 	if err := db.Save(&opening).Error; err != nil {
 		logger.Errorf("error updating opening: %v", err.Error())

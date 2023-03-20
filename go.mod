@@ -1,4 +1,4 @@
-module github.com/danielbrazrocha/goportunities
+module github.com/danielbrazrocha/gopportunities
 
 go 1.20
 
